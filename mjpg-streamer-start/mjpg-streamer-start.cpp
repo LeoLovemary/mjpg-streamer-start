@@ -36,11 +36,6 @@ int main(int argc, char *argv[])
 
 		if (pid == 0) {
 			//child
-			char *output = "";
-			//execl("mjpg_streamer", "-o", "output_http.so -w ./www","-i","input_uvc.so", NULL
-			//cout << " -o \"output_http.so -w .\/www  -i \"input_uvc.so\"" << endl;
-			//execl("mjpg_streamer",""," -o \"output_http.so -w ./www\" \" -i \"./input_uvc.so\"", NULL);
-			//execl("./mjpg_streamer", "-o", "\"output_http.so -w ./www\"", "-i", "\"input_uvc.so\"", NULL);
 			execl("mjpg_streamer", "", "-o","output_http.so -w ./www","-i","input_uvc.so", NULL);
 			exit(-1);
 		}
